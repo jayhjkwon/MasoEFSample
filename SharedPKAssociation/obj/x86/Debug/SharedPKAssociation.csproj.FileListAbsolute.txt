@@ -1,0 +1,7 @@
+C:\TestSrc\MasoEFSample\SharedPKAssociation\bin\Debug\SharedPKAssociation.exe
+C:\TestSrc\MasoEFSample\SharedPKAssociation\bin\Debug\SharedPKAssociation.pdb
+C:\TestSrc\MasoEFSample\SharedPKAssociation\bin\Debug\EntityFramework.dll
+C:\TestSrc\MasoEFSample\SharedPKAssociation\bin\Debug\EntityFramework.xml
+C:\TestSrc\MasoEFSample\SharedPKAssociation\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\TestSrc\MasoEFSample\SharedPKAssociation\obj\x86\Debug\SharedPKAssociation.exe
+C:\TestSrc\MasoEFSample\SharedPKAssociation\obj\x86\Debug\SharedPKAssociation.pdb

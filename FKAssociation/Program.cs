@@ -22,14 +22,16 @@ namespace FKAssociation
                 Student s1 = new Student() { Name = "student1", FirstAddress = a1, SecondAddress = a2 };
                 context.Students.Add(s1);
 
+                // Unique Constraint를 추가하면 아래 s2는 저장되지 않는다.
                 Student s2 = new Student() { Name = "student2", FirstAddress = a1, SecondAddress = a2 };
                 context.Students.Add(s2);
 
                 Teacher t1 = new Teacher() { Name = "teacher1", Address = a1 };
                 context.Teachers.Add(t1);
 
-                //Teacher t2 = new Teacher() { Name = "teacher2", Address = a1 };
-                //context.Teachers.Add(t2);
+                // Unique Constraint를 추가하면 아래 t2는 저장되지 않는다.
+                Teacher t2 = new Teacher() { Name = "teacher2", Address = a1 };
+                context.Teachers.Add(t2);
 
                 context.SaveChanges();
 

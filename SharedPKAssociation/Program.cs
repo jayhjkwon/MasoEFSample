@@ -16,9 +16,16 @@ namespace SharedPKAssociation
 
                 SchoolContext context = new SchoolContext();
                 
-                Address address = new Address { City = "제천"};
-                Student student = new Student { Name = "Scott Hanselman", Address=address };
-                context.Students.Add(student);
+                //Address address = new Address { City = "제천"};
+                //Student student = new Student { Name = "Scott Hanselman", Address=address };
+                //context.Students.Add(student);
+                //Teacher teacher = new Teacher { Name = "Scott Gu", Address = address };
+                //context.Teachers.Add(teacher);
+
+                Student student = new Student { Name = "Scott Hanselman" };
+                Teacher teacher = new Teacher { Name = "Scott Gu" };
+                Address address = new Address { City = "제천", Student = student, Teacher=teacher };
+                context.Addresses.Add(address);
                 
                 context.SaveChanges();
 
@@ -37,12 +44,18 @@ namespace SharedPKAssociation
     {
         public DbSet<Address> Addresses { get; set; }
         public DbSet<Student> Students { get; set; }
+        public DbSet<Teacher> Teachers { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Student>()
                         .HasOptional(s => s.Address)
                         .WithRequired(a => a.Student);
+
+            modelBuilder.Entity<Teacher>()
+                .HasOptional(t => t.Address)
+                .WithRequired(a => a.Teacher);
+
         }
     }
 
@@ -52,6 +65,7 @@ namespace SharedPKAssociation
         public string City { get; set; }
 
         public virtual Student Student { get; set; }
+        public virtual Teacher Teacher { get; set; }
     }
 
     public class Student
@@ -61,5 +75,14 @@ namespace SharedPKAssociation
 
         public virtual Address Address { get; set; }
     }
+
+    public class Teacher
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+
+        public virtual Address Address { get; set; }
+    }
+
 
 }

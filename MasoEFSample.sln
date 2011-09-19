@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedPKAssociation", "SharedPKAssociation\SharedPKAssociation.csproj", "{2A4885A3-977C-4DFB-862F-F451A26389EC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FKAssociation", "FKAssociation\FKAssociation.csproj", "{A8CE1554-B4DA-4C65-8C81-99A597242D65}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -13,6 +15,10 @@ Global
 		{2A4885A3-977C-4DFB-862F-F451A26389EC}.Debug|x86.Build.0 = Debug|x86
 		{2A4885A3-977C-4DFB-862F-F451A26389EC}.Release|x86.ActiveCfg = Release|x86
 		{2A4885A3-977C-4DFB-862F-F451A26389EC}.Release|x86.Build.0 = Release|x86
+		{A8CE1554-B4DA-4C65-8C81-99A597242D65}.Debug|x86.ActiveCfg = Debug|x86
+		{A8CE1554-B4DA-4C65-8C81-99A597242D65}.Debug|x86.Build.0 = Debug|x86
+		{A8CE1554-B4DA-4C65-8C81-99A597242D65}.Release|x86.ActiveCfg = Release|x86
+		{A8CE1554-B4DA-4C65-8C81-99A597242D65}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
